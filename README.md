@@ -82,7 +82,7 @@ telugu_dataset = load_dataset("wikiann", "te")  # Will prompt for confirmation
 ### 3. BiLSTM-CRF Approach
 - **Architecture**: Word embeddings → BiLSTM layers → CRF layer
 - **Word representations**: Pre-trained GloVe/FastText embeddings with character-level CNNs
-- **Hyperparameters**: Hidden dimensions: 256, Dropout: 0.5, Optimizer: Adam
+- **Hyperparameters**: Hidden dimensions: 512, Dropout: 0.2, Optimizer: Adam
 - **Training strategy**: Early stopping based on validation F1 score
 
 ### 4. BERT-based Approach
@@ -90,7 +90,7 @@ telugu_dataset = load_dataset("wikiann", "te")  # Will prompt for confirmation
   - English: bert-base-cased
   - Telugu: indic-transformers/ai4bharat-indic-bert
 - **Fine-tuning**: Token classification head on top of transformer encodings
-- **Training parameters**: Learning rate: 3e-5, Batch size: 16, Epochs: 3-5
+- **Training parameters**: Learning rate: 2e-5, Batch size: 16, Epochs: 5
 - **Implementation**: Hugging Face's Transformers library
 
 ## Performance Results
@@ -113,9 +113,17 @@ Core dependencies (automatically installed in notebooks):
 tensorflow>=2.4.0
 torch>=1.8.0
 transformers>=4.5.0
+evaluate
+seqeval
 sklearn-crfsuite>=0.3.6
 nltk>=3.6.2
 datasets>=1.8.0
+tqdm
+torchcrf
+pytorch-crf
+tabulate
+spacy
+python -m spacy download en_core_web_sm
 pandas>=1.2.4
 numpy>=1.19.5
 matplotlib>=3.4.2
