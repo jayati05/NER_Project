@@ -97,12 +97,13 @@ telugu_dataset = load_dataset("wikiann", "te")  # Will prompt for confirmation
 
 ### Summary Table: Overall F1 Comparison
 
+
 | Model | English F1 | Telugu F1 |
 |-------|:----------:|:---------:|
-| Rule-based | 61.85% | 22.91% |
-| CRF | 82.39% | 67.13% |
+| Rule-based | 61.85% | 22.58% |
+| CRF | 82.39% | 67.37% |
 | BiLSTM-CRF | 78.14% | 61.98% |
-| BERT | 91.76% | 77.11% |
+| BERT | 91.64% | 77.11% |
 
 We have observed several error patterns in the models mentioned above. Each notebook contains detailed error analysis and confusion matrices for their respective approaches.
 
