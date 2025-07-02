@@ -131,7 +131,7 @@ matplotlib>=3.4.2
 seaborn>=0.11.1
 ```
 
-## Troubleshooting Guide
+## Troubleshooting Guide 
 
 ### Common Issues and Solutions
 
@@ -147,7 +147,6 @@ seaborn>=0.11.1
 
 - **Training takes too long**:
   - Reduce the number of epochs
-  - Use smaller subsets of data for initial experiments
   - Enable GPU acceleration
 
 - **Out of memory during BERT training**:
